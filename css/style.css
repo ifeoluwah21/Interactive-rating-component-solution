@@ -15,11 +15,13 @@ body {
   font-family: "Overpass", sans-serif;
 }
 
-main {
+section.intro {
   margin: 0 1rem;
   padding: 2rem 2rem;
   border-radius: 2rem;
   background: hsl(213, 19%, 18%);
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 header > nav.logo {
@@ -45,7 +47,7 @@ h1.intro-text {
   padding: 1rem 0rem;
 }
 
-section p {
+main p {
   word-spacing: 1px;
   font-size: 15px;
   line-height: 1.4rem;
@@ -69,6 +71,7 @@ section p {
   position: relative;
   color: hsl(217, 12%, 63%);
   transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 .rating span {
@@ -120,6 +123,9 @@ button:hover {
   background: hsl(217, 12%, 63%);
   color: hsl(0, 0%, 100%);
 }
+span {
+  pointer-events: none;
+}
 
 .rating.active {
   background: hsl(25, 97%, 53%);
@@ -127,7 +133,7 @@ button:hover {
 }
 
 @media screen and (min-width: 440px) {
-  main {
+  section.intro {
     width: 420px;
     height: 440px;
     padding: 2rem 2rem;
@@ -172,7 +178,7 @@ button:hover {
 main.submitted {
   width: 420px;
   height: 440px;
-  display: flex;
+  display: none;
   padding: 2rem 2rem;
   border-radius: 2rem;
   background: hsl(213, 19%, 18%);
